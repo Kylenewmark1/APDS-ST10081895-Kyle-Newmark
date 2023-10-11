@@ -1,0 +1,46 @@
+### POST Authentication
+POST https://localhost:3000/api/auth HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Kaylox",
+    "password": "Bulgaria1",
+    "firstName": "Kyle",
+    "lastName": "Newmark"
+}
+
+# User Endpoint
+### GET User
+GET https://localhost:3000/api/user HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI2NjI0YzgwODczYThiOGU3MGRmOGUiLCJpYXQiOjE2OTcwMTUzODB9.GMshkABtrr6Xiy52ctcDYxnc36vzpLiP9874JOQZeqE
+
+### POST New User
+POST https://localhost:3000/api/user HTTP/1.1
+Content-Type: application/json
+
+{
+     "username": "Kaylox",
+    "password": "Bulgaria1",
+    "firstName": "Kyle",
+    "lastName": "Newmark"
+}
+
+# Post Endpoint
+### GET Posts
+GET https://localhost:3000/api/post HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI2NmMxMjg5MzRjNWRiODZjY2YyZTIiLCJpYXQiOjE2OTcwMTY4ODB9.X1Pb6Se9PiwCQca_YDOqSiNAG_M09wadr1liJUjIWPw
+
+### POST New Post
+POST https://localhost:3000/api/post HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI2NmMxMjg5MzRjNWRiODZjY2YyZTIiLCJpYXQiOjE2OTcwMTY4ODB9.X1Pb6Se9PiwCQca_YDOqSiNAG_M09wadr1liJUjIWPw
+
+{
+    "title": "Head Office",
+    "description": "Boss of the National Government",
+    "departmentCode": "HO1"
+}
+
+### DELETE Post
+DELETE https://localhost:3000/api/post/65266dd02b61d0d036364304 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI2NmMxMjg5MzRjNWRiODZjY2YyZTIiLCJpYXQiOjE2OTcwMTcwODV9.SUBMNFmLHYdksLA25iEiok5SpK1QR_Jcjzuvvuh5Bno
